@@ -4,6 +4,9 @@
 ## Ephraim Wesley
 ## Cedric Nkansah
 
+# Firebase Link for Devs
+## https://console.firebase.google.com/u/0/project/socialmediafitnessapp/overview
+
 # Instructions
 ## Create a new folder
 ## Open the command prompt & change the directory into the new folder
