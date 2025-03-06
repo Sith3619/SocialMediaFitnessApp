@@ -1,0 +1,164 @@
+main {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  text-align: left;
+  background-color: #fafafa;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.sidebar h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+ul {
+  padding-left: 20px;
+  list-style-type: none;
+  color: #555;
+}
+
+.feed {
+  flex: 3;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.post {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.post-avatar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.post-header span {
+  font-weight: bold;
+  color: #333;
+}
+
+.post p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.like-btn,
+.comment-btn {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.like-btn:hover,
+.comment-btn:hover {
+  background-color: #005fa3;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+
+  .feed {
+    flex: 1;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .post {
+    padding: 15px;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
