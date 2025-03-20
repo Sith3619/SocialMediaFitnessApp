@@ -1,0 +1,45 @@
+.page-two-container {
+    padding: 20px;
+  }
+  
+  .section {
+    margin-bottom: 30px;
+  }
+  
+  h3 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .setting-option,
+  .profile-customization,
+  .workout-plan {
+    margin: 10px 0;
+  }
+  
+  input[type='text'],
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  textarea {
+    height: 100px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #005fa3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #005fa3;
+  }
+  

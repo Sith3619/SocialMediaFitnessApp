@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth, db } from "../components/firebase/firebase";
-import { getDoc, doc } from "firebase/firestore";
+import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { auth, db, googleProvider } from "../components/firebase/firebase";
+import { setDoc, doc, getDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import "./pageStyles/login.css";
 
@@ -29,6 +29,31 @@ const Login = () => {
       navigate("/");
     } catch (error) {
       setError("Invalid email or password");
+      console.error("Error during email login:", error.message);
+    }
+  };
+
+  const handleGoogleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, googleProvider);
+      const user = result.user;
+
+      const userDoc = await getDoc(doc(db, "users", user.uid));
+      if (userDoc.exists()) {
+        console.log("User Info:", userDoc.data());
+      } else {
+        console.log("New user detected, creating user document...");
+        await setDoc(doc(db, "users", user.uid), {
+          name: user.displayName,
+          email: user.email,
+          profilePicture: user.photoURL,
+        });
+      }
+
+      navigate("/");
+    } catch (error) {
+      setError("Google sign-in failed");
+      console.error("Error during Google login:", error.message);
     }
   };
 
@@ -53,6 +78,9 @@ const Login = () => {
         />
         <button type="submit">Login</button>
       </form>
+      <button onClick={handleGoogleLogin} className="google-login">
+        Sign in with Google
+      </button>
       <p>
         Don't have an account? <a href="/signup">Sign Up</a>
       </p>

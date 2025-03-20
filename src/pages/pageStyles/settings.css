@@ -1,0 +1,21 @@
+.settings-page {
+    padding: 20px;
+    background-color: var(--background);
+    color: var(--text-color);
+  }
+  
+  .settings-page button {
+    margin: 5px 0;
+    padding: 5px 10px;
+  }
+  
+  :root {
+    --background: #fff;
+    --text-color: #000;
+  }
+  
+  body.dark-mode {
+    --background: #333;
+    --text-color: #fff;
+  }
+  

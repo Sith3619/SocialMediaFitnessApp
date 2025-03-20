@@ -29,9 +29,13 @@ function Header() {
         <div className="dropdown">
           <button className="dropbtn">Menu</button>
           <div className="dropdown-content">
-            <Link to="/page-one">Page One</Link>
-            <Link to="/page-two">Page Two</Link>
-            <Link to="/page-three">Page Three</Link>
+            <Link to="/">Home</Link>
+            <Link to="/page-two">Profile</Link>
+            <Link to="/settings">Settings</Link>
+            <Link to="/privacy-controls">Privacy Controls</Link>
+            <Link to="/custom-workouts">Workout Plans</Link>
+            <Link to="/page-one">TempBlank</Link>
+            <Link to="/page-three">Trackers</Link>
           </div>
         </div>
         <button onClick={handleLogout} className="logout-btn">
@@ -40,7 +44,6 @@ function Header() {
       </div>
     </header>
   );
-  
 }
 
 export default Header;

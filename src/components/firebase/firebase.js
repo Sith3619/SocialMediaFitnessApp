@@ -3,6 +3,9 @@ import {
   getAuth,
   setPersistence,
   browserLocalPersistence,
+  GoogleAuthProvider,
+  signInWithPopup,
+  signInWithEmailAndPassword,
 } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
@@ -19,6 +22,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
+const googleProvider = new GoogleAuthProvider();
 
 setPersistence(auth, browserLocalPersistence)
   .then(() => {
@@ -33,4 +37,10 @@ setPersistence(auth, browserLocalPersistence)
     console.log("Error setting the persistence: ", error);
   });
 
-export { auth, db };
+export {
+  auth,
+  db,
+  googleProvider,
+  signInWithPopup,
+  signInWithEmailAndPassword,
+};
