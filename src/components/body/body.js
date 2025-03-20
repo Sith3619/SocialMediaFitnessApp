@@ -60,7 +60,7 @@ function Body() {
                 alt="User Avatar"
                 className="post-avatar"
               />
-              <span>Cedric Nkansah</span>
+              <span>Cedrick Nkansah</span>
             </div>
             <p>Second Filler Body Content</p>
             <button className="like-btn">Like</button>

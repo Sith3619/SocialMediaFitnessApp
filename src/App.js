@@ -15,11 +15,12 @@ import PrivacyPolicy from "./pages/privacyPolicy";
 import Contact from "./pages/contact";
 import { auth } from "./components/firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
+import PageThree from "./pages/pageThree";
 import "./index.css";
 
 const PageOne = () => <div>First Page Nisith</div>;
 const PageTwo = () => <div>Second Page Ephraim</div>;
-const PageThree = () => <div>Third Page Cedrick</div>;
+// const PageThree = () => <div>Third Page Cedrick</div>;
 
 function ProtectedRoute({ children }) {
   const [user] = useAuthState(auth);
