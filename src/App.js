@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Route,
   Routes,
   Navigate,
@@ -55,7 +55,7 @@ function App() {
   }, [auth.currentUser]);
 
   return (
-    <Router>
+    <BrowserRouter basename="/SocialMediaFitnessApp">
       <div className="app">
         <Header />
         <Routes>
@@ -110,7 +110,6 @@ function App() {
               </ProtectedRoute>
             }
           />
-
           <Route
             path="/page-three"
             element={
@@ -122,7 +121,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
