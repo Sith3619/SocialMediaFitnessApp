@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/SocialMediaFitnessApp/static/css/main.ca14cb34.css",
-    "main.js": "/SocialMediaFitnessApp/static/js/main.b2834a9f.js",
+    "main.js": "/SocialMediaFitnessApp/static/js/main.578bcc1b.js",
     "index.html": "/SocialMediaFitnessApp/index.html",
     "main.ca14cb34.css.map": "/SocialMediaFitnessApp/static/css/main.ca14cb34.css.map",
-    "main.b2834a9f.js.map": "/SocialMediaFitnessApp/static/js/main.b2834a9f.js.map"
+    "main.578bcc1b.js.map": "/SocialMediaFitnessApp/static/js/main.578bcc1b.js.map"
   },
   "entrypoints": [
     "static/css/main.ca14cb34.css",
-    "static/js/main.b2834a9f.js"
+    "static/js/main.578bcc1b.js"
   ]
 }
