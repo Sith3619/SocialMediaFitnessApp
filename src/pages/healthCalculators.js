@@ -1,7 +1,7 @@
 import {useState} from "react";
 
 
-// list of health trackers
+
 
 const HealthCalculator=()=> {
 
@@ -48,10 +48,14 @@ const bmiCalculator=()=>{
 
 //calorie calculator
 const calorieCalculator=()=>{
-    if(!weight || !height || !age || !gender || !activityLevel){
+    if(!weight || !height || !age  || !gender || !activityLevel){
         setError("Please fill in all fields");
         setCalories(null);
         return;
+    }
+    if( age<15 && age>80){
+        setError("Ages should be between 15 and 80");
+        setCalories(null);
     }
     setError("");
     let BMR;
@@ -85,6 +89,9 @@ return(
     <h1>Health Calculator</h1>
  {/* BMI calculator */}
     <h2> BMI Calculator</h2>
+     <div className= "bmi-info">
+        <p> Body Mass Index (BMI) is a measure of body fat based on height and weight. It is used to assess whether a person has a healthy body weight for their height.</p>
+         </div>
     <p> Fill in the fields to calculate your BMI</p>
     
    <label htmlFor="weight">Weight</label>
@@ -104,6 +111,11 @@ return(
 
 {/* Calories calculator */}
     <h2> Calorie Calculator</h2>
+    <div className= "calorie-info">
+        <p> Daily calorie needs are the number of calories your body needs to maintain its current weight. This is based on your Basal Metabolic Rate (BMR) and your activity level.</p>
+        <br/>
+        <p> BMR is </p>
+    </div>
     <p> Fill in the fields to calculate your daily calorie needs</p>
     <label htmlFor="calorieWeight">Weight</label>
     <input name="calorieWeight" type="number" placeholder="Enter your weight in kg" value={weight} onChange={(e)=> setWeight(e.target.value)}></input>
@@ -112,6 +124,7 @@ return(
     <input name="calorieHeight" type="number" placeholder="Enter your height in cm" value={height} onChange={(e)=> setHeight(e.target.value)}></input>
     <br/>
     <label htmlFor="age">Age</label>
+    <p> Ages should range from 15 to 80</p>
     <input name="age" type="number" placeholder="Enter your age in years" value={age} onChange={(e)=> setAge(e.target.value)}></input>
     <br/>
     <label htmlFor="gender">Gender</label>
@@ -144,7 +157,7 @@ return(
                 <p> <strong>Calories to Maintain Weight:</strong> {calorie.maintain} kcal/day</p>
                 <p><strong> Calories to Gain Weight:</strong> {calorie.gainWeight} kcal/day</p>
             </div>
-        )}
+        )}  
    </>
 )
 
