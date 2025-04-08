@@ -36,6 +36,8 @@ function Header() {
             <Link to="/custom-workouts">Workout Plans</Link>
             <Link to="/page-one">TempBlank</Link>
             <Link to="/page-three">Trackers</Link>
+            <Link to="/leaderboard">Leaderboard</Link>
+            <Link to="/health-calculator">Health Calculator</Link>
           </div>
         </div>
         <button onClick={handleLogout} className="logout-btn">

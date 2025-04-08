@@ -20,6 +20,8 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { doc, getDoc } from "firebase/firestore";
 import PageTwo from "./pages/pageTwo";
 import PageThree from "./pages/pageThree";
+import HealthCalculator from "./pages/healthCalculators";
+import Leaderboard from "./pages/leaderBoard";
 import "./index.css";
 
 function ProtectedRoute({ children }) {
@@ -65,6 +67,8 @@ function App() {
           <Route path="/privacy-controls" element={<PrivacyControls />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/health-calculator" element={<HealthCalculator />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
           <Route
             path="/"
             element={

@@ -1,0 +1,181 @@
+
+/* Container */
+.leaderboard-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title */
+  .leaderboard-title {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Table container */
+  .table-container {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+  }
+  
+  /* Table */
+  .leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    font-size: 16px;
+  }
+  
+  /* Table headers */
+  .leaderboard-table th {
+    background-color: #3498db;
+    color: white;
+    text-align: left;
+    padding: 16px 20px;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
+  .leaderboard-table th:first-child {
+    border-top-left-radius: 8px;
+  }
+  
+  .leaderboard-table th:last-child {
+    border-top-right-radius: 8px;
+    text-align: right;
+  }
+  
+  /* Table cells */
+  .leaderboard-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #ecf0f1;
+    transition: background-color 0.2s ease;
+  }
+  
+  /* Row hover effect */
+  .leaderboard-row:hover {
+    background-color: #f5f9ff;
+  }
+  
+  /* Last row - no bottom border */
+  .leaderboard-row:last-child td {
+    border-bottom: none;
+  }
+  
+  /* Points column alignment */
+  .points-column, .points-cell {
+    text-align: right;
+  }
+  
+  /* Points styling */
+  .points-cell {
+    font-weight: bold;
+    color: #3498db;
+    font-size: 18px;
+  }
+  
+  /* Rank cell styling */
+  .rank-cell {
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Medal styles  */
+  .first-place {
+    background-color: rgba(255, 215, 0, 0.08);
+  }
+  
+  .first-place .rank-cell {
+    color: #ff9800;
+    font-weight: 700;
+  }
+  
+  .first-place:hover {
+    background-color: rgba(255, 215, 0, 0.15);
+  }
+  
+  .second-place {
+    background-color: rgba(192, 192, 192, 0.08);
+  }
+  
+  .second-place .rank-cell {
+    color: #78909c;
+    font-weight: 700;
+  }
+  
+  .second-place:hover {
+    background-color: rgba(192, 192, 192, 0.15);
+  }
+  
+  .third-place {
+    background-color: rgba(205, 127, 50, 0.08);
+  }
+  
+  .third-place .rank-cell {
+    color: #a1887f;
+    font-weight: 700;
+  }
+  
+  .third-place:hover {
+    background-color: rgba(205, 127, 50, 0.15);
+  }
+  
+  /* Update info text */
+  .update-info {
+    font-size: 14px;
+    text-align: center;
+    color: #95a5a6;
+    margin-top: 20px;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .leaderboard-container {
+      width: 95%;
+      padding: 20px;
+      margin: 20px auto;
+    }
+    
+    .leaderboard-table th,
+    .leaderboard-table td {
+      padding: 12px 15px;
+    }
+    
+    .leaderboard-title {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* For very small screens */
+  @media (max-width: 480px) {
+    .leaderboard-table {
+      font-size: 14px;
+    }
+    
+    .leaderboard-table th,
+    .leaderboard-table td {
+      padding: 10px;
+    }
+    
+    .points-cell,
+    .rank-cell {
+      font-size: 16px;
+    }
+    
+    .leaderboard-title {
+      font-size: 24px;
+    }
+  }

@@ -1,0 +1,87 @@
+
+
+  /* Headings */
+  h1.heading {
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    color: #34495e;
+    text-align: left;
+  }
+  
+  /* Info Sections */
+  .bmi-info,
+  .BMR-info {
+    background-color: #e8f0fe;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    width: 60%;
+  }
+  
+  /* Labels and Inputs */
+  label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+    text-align: left;
+  }
+  
+  input,
+  select {
+    width: 60%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Buttons */
+  .Btn {
+    width:15%;
+    margin-top: 1rem;
+    padding: 8px 20px;
+    background-color: #0056b3;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.Btn:hover {
+    background-color: #007bff;
+  }
+  
+  /* Results Section */
+  .bmiResult,
+  .bmrResult {
+    background-color: #fff;
+    padding: 15px;
+    margin-top: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 60%;
+  }
+  
+  .bmiResult p,
+  .bmrResult p {
+    margin: 0.5rem 0;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+  
+  strong {
+    color: #2c3e50;
+  }
+  
