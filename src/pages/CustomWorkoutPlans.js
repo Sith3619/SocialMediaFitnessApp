@@ -90,6 +90,9 @@ const WorkoutPlans = () => {
   return (
     <div className="workout-plan-container">
       <h2>Custom Workout Plans</h2>
+      <i style={{fontSize:18}}>Create and keep track of your personal goals.</i>
+      <br></br>
+
 
       {error && <p className="error-message">{error}</p>}
       {successMessage && <p className="success-message">{successMessage}</p>}
