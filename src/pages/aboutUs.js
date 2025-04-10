@@ -7,22 +7,30 @@ const AboutUs = () => {
       <h1 className="about-title">About Us</h1>
       <div className="about-content">
         <p className="about-description">
-          Welcome to SithDwellers Management, your trusted partner in real
-          estate management. Our team is dedicated to providing top-tier
-          services to property owners, tenants, and investors, ensuring smooth
-          transactions and long-lasting relationships.
+          Welcome to <strong>FlexCo</strong> – the ultimate fitness-focused
+          social media platform where motivation meets community. We’re
+          dedicated to helping you stay active, engaged, and on track with your
+          health goals, all while connecting with friends and fitness
+          enthusiasts.
         </p>
         <p className="about-description">
-          With years of experience in the industry, we specialize in property
-          management, investment strategies, and a comprehensive understanding
-          of the market. We are committed to providing tailored solutions to
-          meet your unique needs.
+          At FlexCo, every like, comment, and share earns you points. But that’s
+          just the beginning. Use our built-in tools like workout trackers, BMI
+          and BMR calculators, and other wellness features to rack up even more
+          points. Everything you do contributes to your progress.
         </p>
         <p className="about-description">
-          Our mission is to make real estate management as hassle-free and
-          efficient as possible. Whether you're a first-time investor or a
-          seasoned property owner, we’re here to support you every step of the
-          way.
+          Your points aren’t just for show — they're ranked on a dynamic
+          leaderboard, giving you the chance to compete with your friends or
+          challenge new connections. Whether you're working out solo or teaming
+          up, FlexCo turns your fitness journey into a fun and rewarding
+          experience.
+        </p>
+        <p className="about-description">
+          Our mission is to create a supportive space where fitness and social
+          interaction go hand-in-hand. No matter your level, FlexCo is here to
+          push you forward, keep you accountable, and celebrate every
+          achievement along the way.
         </p>
       </div>
     </div>
