@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase/firebase";
 import "./header.css";
+import { FaCog, FaHome, FaCalculator, FaRegUser, FaRing, FaClipboardList } from "react-icons/fa";
 
 function Header() {
   const navigate = useNavigate();
@@ -35,25 +36,25 @@ function Header() {
         </button> */}
         <nav className={`header-nav ${menuOpen ? "show" : ""}`}>
           <Link to="/" className="header-button">
-            Home
+          <FaHome style={{marginLeft: '-1rem', fontSize: 12}} /> Home
           </Link>
           <Link to="/profile" className="header-button">
-            Profile
+          <FaRegUser style={{marginLeft: '-1rem', fontSize: 12}}/> Profile
           </Link>
           <Link to="/settings" className="header-button">
-            Settings
+          <FaCog style={{marginLeft: '-1rem', fontSize: 12}}/> Settings
           </Link>
           <Link to="/health-calculator" className="header-button">
-            BMI/BMR
+          <FaCalculator style={{marginLeft: '-1rem', fontSize: 12}} /> BMI/BMR
           </Link>
           <Link to="/custom-workouts" className="header-button">
-            Workouts
+          <FaRing style={{marginLeft: '-1rem', fontSize: 12}}/> Workouts
           </Link>
           <Link to="/trackers" className="header-button">
-            Trackers
+          <FaClipboardList style={{marginLeft: '-1rem', fontSize: 12}} /> Trackers
           </Link>
           <button onClick={handleLogout} className="header-button logout-btn">
-            Logout
+           Logout
           </button>
         </nav>
       </div>
