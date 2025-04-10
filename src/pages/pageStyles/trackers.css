@@ -41,7 +41,7 @@ h3 {
 
 h1 {
   font-size: 30px;
-  color: #6a1b9a;
+  color: #c084fc;
 }
 
 h2 {
@@ -146,7 +146,7 @@ tr:nth-child(even) td {
 }
 
 .summary-container strong {
-  color: #6a1b9a;
+  color: #c084fc;
   animation: pulse 2s infinite;
 }
 
