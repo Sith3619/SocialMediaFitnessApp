@@ -14,6 +14,10 @@ function Settings({ theme, setTheme }) {
   return (
     <div className="settings-page">
       <h2>Account Settings</h2>
+    <i style={{fontSize:18}}>Change your account information.</i> <br></br>
+      <br></br>
+      <hr></hr>
+      <br></br>
 
       <label>Email:</label>
       <input
