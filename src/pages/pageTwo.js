@@ -37,6 +37,10 @@ const PageTwo = ({ setProfileName, setProfileBio, setProfilePic }) => {
   return (
     <div className="page-two-container">
       <h2>Update Your Profile</h2>
+     <i style={{fontSize: 18}}>Manage your profile settings.</i> <br></br>
+      <br></br>
+      <hr></hr>
+  
       <section className="section">
         <label htmlFor="name">Profile Name:</label>
         <input
