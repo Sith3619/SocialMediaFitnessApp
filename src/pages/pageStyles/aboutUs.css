@@ -1,0 +1,150 @@
+.about-container {
+  background-color: #1a1a1a;
+  color: #eaeaea;
+  padding: 60px;
+  border-radius: 12px;
+  max-width: 1200px;
+  margin: auto;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+  opacity: 1;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.about-title {
+  font-size: 3.5rem;
+  color: #9b59b6;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.7);
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.about-content {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.about-description {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  font-family: "Roboto", sans-serif;
+  text-align: justify;
+  letter-spacing: 0.5px;
+  color: #b0b0b0;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.about-description p {
+  margin-bottom: 15px;
+}
+
+.about-subheading {
+  font-size: 2rem;
+  color: #9b59b6;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+}
+
+.about-team-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.about-team-member {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.about-team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.about-team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.about-team-member h4 {
+  color: #9b59b6;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.about-team-member p {
+  color: #bbb;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.about-button {
+  background-color: #9b59b6;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.about-button:hover {
+  background-color: #8e44ad;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-team-section {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+  }
+
+  .about-description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .about-team-section {
+    grid-template-columns: 1fr;
+  }
+
+  .about-button {
+    width: 100%;
+    padding: 12px;
+  }
+}

@@ -1,0 +1,239 @@
+.health-calculator {
+  background-color: #0e0e0e;
+  color: #f1f1f1;
+  font-family: "Segoe UI", sans-serif;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.health-calculator .heading {
+  text-align: center;
+  color: #c084fc;
+  font-size: 2.8rem;
+  margin: 40px 0 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.health-calculator h2 {
+  color: #a855f7;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 2rem;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.health-calculator p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+  margin: 10px auto;
+  max-width: 700px;
+  text-align: center;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.health-calculator label {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.health-calculator input,
+.health-calculator select {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px 14px;
+  margin-top: 8px;
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s, background 0.3s;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.health-calculator input:focus,
+.health-calculator select:focus {
+  border-color: #c084fc;
+  background-color: #2a2a2a;
+  outline: none;
+}
+
+.health-calculator .Btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #9333ea, #a855f7);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.health-calculator .Btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+}
+
+.health-calculator .bmi-container,
+.health-calculator .bmr-container {
+  margin-top: 25px;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.health-calculator .bmi-info,
+.health-calculator .BMR-info {
+  background-color: #222;
+  border-left: 4px solid #9333ea;
+  padding: 16px 20px;
+  margin: 10px auto 20px;
+  max-width: 700px;
+  border-radius: 8px;
+  color: #ccc;
+  font-style: italic;
+}
+
+.health-calculator .bmi-container input,
+.health-calculator .bmr-container input {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.health-calculator .bmi-container button,
+.health-calculator .bmr-container button {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.health-calculator .bmi-result,
+.health-calculator .bmr-result {
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-radius: 8px;
+  color: #f1f1f1;
+  margin-top: 20px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.health-calculator .bmi-result p,
+.health-calculator .bmr-result p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.health-calculator .bmi-result h2,
+.health-calculator .bmr-result h2 {
+  color: #a855f7;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.health-calculator .bmi-result p.category,
+.health-calculator .bmr-result p.calories {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.health-calculator .bmr-result p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.health-calculator .bmr-result .calories-to-lose-weight,
+.health-calculator .bmr-result .calories-to-maintain-weight,
+.health-calculator .bmr-result .calories-to-gain-weight {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.health-calculator .bmi-result p,
+.health-calculator .bmr-result p {
+  margin-bottom: 15px;
+}
+
+.health-calculator .bmr-result p.calories strong {
+  color: #9333ea;
+}
+
+.health-calculator .bmr-result p.calories-to-lose-weight {
+  color: #ff4f4f;
+}
+
+.health-calculator .bmr-result p.calories-to-maintain-weight {
+  color: #4caf50;
+}
+
+.health-calculator .bmr-result p.calories-to-gain-weight {
+  color: #ff9800;
+}
+
+.health-calculator .error {
+  color: red;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .health-calculator .heading {
+    font-size: 2.2rem;
+  }
+
+  .health-calculator h2 {
+    font-size: 1.6rem;
+  }
+
+  .health-calculator input,
+  .health-calculator select {
+    font-size: 0.95rem;
+  }
+}

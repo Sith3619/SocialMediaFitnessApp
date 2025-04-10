@@ -1,91 +1,213 @@
-header {
-  background-color: black;
-  color: white;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-  font-weight: bold;
-  justify-content: space-between;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-header h1 {
-  margin: 0;
-  font-family: "Sigmar", sans-serif;
-  font-size: 2rem;
-  color: #333;
+body {
+  background-color: #111;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #121212;
+  padding: 10px 40px 10px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid #8a2be2;
+  position: relative;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+header:hover {
+  background-color: #1a1a1a;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap");
 
 .header-link {
+  font-family: Sigmar, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #8a2be2;
   text-decoration: none;
+  padding: 10px 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.header-link:hover {
   color: #333;
-  font-family: 'Sigmar', sans-serif;
-  font-size: 2rem;
+  transform: scale(1.05);
+}
+
+h1 {
+  font-size: 38px;
+  font-weight: bold;
+  color: #8a2be2;
+  text-transform: uppercase;
+  padding-top: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  letter-spacing: 2px;
+  transition: font-size 0.3s ease;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-nav a {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 40px;
+  border-radius: 12px;
+  background-color: #222;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.header-nav a:hover {
+  background-color: #8a2be2;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.header-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 100%;
+  background-color: #8a2be2;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.header-nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.logout-btn {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 40px;
+  border-radius: 12px;
+  background-color: #222;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: none;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #000000;
+  color: #fff;
+  transform: scale(1.05);
 }
 
 .header-right {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-left: auto;
+  gap: 20px;
 }
 
-.dropbtn {
-  background-color: #0077cc;
-  color: white;
-  border: none;
-  padding: 10px;
-  font-size: 16px;
-  cursor: pointer;
-}
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
 
-.dropbtn:hover {
-  background-color: #005fa3;
-}
+  h1 {
+    font-size: 32px;
+    padding-top: 10px;
+    text-align: left;
+  }
 
-.dropdown {
-  position: relative;
-}
+  .header-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    align-items: flex-start;
+    padding: 10px 0;
+    transition: transform 0.3s ease;
+  }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #ffffff;
-  min-width: 160px;
-  border-radius: 5px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  right: 0;
-  left: auto;
-  padding: 5px 0;
-}
+  .header-nav a {
+    padding: 10px 20px;
+    font-size: 14px;
+    width: 100%;
+    text-align: left;
+    border-radius: 8px;
+  }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+  .header-nav a:hover {
+    transform: scale(1.05);
+  }
 
-.dropdown-content a {
-  color: black;
-  padding: 10px 15px;
-  text-decoration: none;
-  display: block;
-  font-size: 14px;
-}
+  .logout-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+    margin-top: 15px;
+    width: 100%;
+  }
 
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
+  .menu-btn {
+    display: none;
+  }
 
-.logout-btn {
-  background-color: red;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-}
+  .header-right {
+    display: block;
+    gap: 10px;
+    width: 100%;
+    margin-top: 15px;
+    align-items: flex-start;
+  }
 
-.logout-btn:hover {
-  background-color: darkred;
+  @media (max-width: 480px) {
+    .header-nav {
+      gap: 12px;
+    }
+
+    .header-nav a {
+      padding: 8px 16px;
+      font-size: 12px;
+    }
+
+    .logout-btn {
+      padding: 10px 15px;
+      font-size: 12px;
+    }
+
+    h1 {
+      font-size: 28px;
+    }
+  }
 }

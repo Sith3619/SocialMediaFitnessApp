@@ -59,7 +59,7 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <h2>Login</h2>
+      <h2 className="title">Login</h2>
       {error && <p className="error">{error}</p>}
       <form onSubmit={handleLogin}>
         <input
@@ -76,13 +76,18 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit">Login</button>
+        <button type="submit" className="login-btn">
+          Login
+        </button>
       </form>
-      <button onClick={handleGoogleLogin} className="google-login">
+      <button onClick={handleGoogleLogin} className="google-login-btn">
         Sign in with Google
       </button>
-      <p>
-        Don't have an account? <a href="/signup">Sign Up</a>
+      <p className="signup-text">
+        Don't have an account?{" "}
+        <a href="/SocialMediaFitnessApp/signUp" className="signup-link">
+          Sign Up
+        </a>
       </p>
     </div>
   );

@@ -1,0 +1,199 @@
+.workout-plan-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #1a1a2e;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.workout-plan-container h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #c084fc;
+}
+
+.workout-plan-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.workout-plan-form input,
+.workout-plan-form button {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #c084fc;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.workout-plan-form input {
+  background-color: #100f1f;
+  color: white;
+}
+
+.workout-plan-form input:focus {
+  outline: none;
+  border-color: #9b59b6;
+}
+
+.workout-plan-form button {
+  background-color: #6a1b9a;
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.workout-plan-form button:hover {
+  background-color: #8e44ad;
+  transform: scale(1.05);
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+}
+
+.success-message {
+  color: #27ae60;
+}
+
+.workout-plan-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+  width: 100%;
+  padding: 10px;
+}
+
+.workout-plan-card {
+  background: #2a1b3d;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  position: relative;
+}
+
+.workout-plan-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+.workout-plan-card h3 {
+  font-size: 24px;
+  color: #c084fc;
+  margin-bottom: 10px;
+}
+
+.workout-plan-card p {
+  font-size: 16px;
+  color: #dcdcdc;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.workout-plan-card button {
+  width: 100%;
+  background-color: #6a1b9a;
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.workout-plan-card button:hover {
+  background-color: #9b59b6;
+  transform: scale(1.05);
+}
+
+@media (max-width: 1200px) {
+  .workout-plan-container {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .workout-plan-section {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .workout-plan-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .workout-plan-card h3 {
+    font-size: 22px;
+  }
+
+  .workout-plan-card p {
+    font-size: 14px;
+  }
+
+  .workout-plan-card button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .workout-plan-container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .workout-plan-card h3 {
+    font-size: 18px;
+  }
+
+  .workout-plan-card p {
+    font-size: 12px;
+  }
+
+  .workout-plan-card button {
+    font-size: 12px;
+    padding: 8px;
+  }
+}

@@ -1,0 +1,142 @@
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    text-shadow: 0 0 5px #8a2be2, 0 0 10px #8a2be2;
+  }
+  50% {
+    text-shadow: 0 0 15px #8a2be2, 0 0 25px #8a2be2;
+  }
+  100% {
+    text-shadow: 0 0 5px #8a2be2, 0 0 10px #8a2be2;
+  }
+}
+
+.leaderboard-container {
+  min-height: 100vh;
+  padding: 60px 20px;
+  background-color: #0b0b0b;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: fadeInUp 0.8s ease forwards;
+  background-image: radial-gradient(
+      circle at top left,
+      rgba(138, 43, 226, 0.1),
+      transparent
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(138, 43, 226, 0.1),
+      transparent
+    );
+}
+
+.leaderboard-title {
+  font-size: 2.8rem;
+  color: #8a2be2;
+  margin-bottom: 40px;
+  font-weight: 700;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.table-container {
+  width: 100%;
+  max-width: 960px;
+  overflow-x: auto;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  background: rgba(25, 25, 25, 0.3);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 18px;
+  font-size: 1.15rem;
+  border-bottom: 1px solid #333;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.leaderboard-table th {
+  background-color: #1c1c1c;
+  color: #8a2be2;
+  font-weight: 700;
+}
+
+.leaderboard-row {
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.leaderboard-row:hover {
+  background-color: #1a1a1a;
+  transform: scale(1.01);
+  box-shadow: 0 0 8px rgba(138, 43, 226, 0.2);
+}
+
+.rank-cell {
+  font-weight: bold;
+  color: #8a2be2;
+}
+
+.points-cell {
+  font-weight: 600;
+  color: #b388ff;
+}
+
+.first-place .rank-cell {
+  color: gold;
+  animation: pulseGlow 2.5s infinite;
+}
+.second-place .rank-cell {
+  color: silver;
+  animation: pulseGlow 2.5s infinite;
+}
+.third-place .rank-cell {
+  color: #cd7f32;
+  animation: pulseGlow 2.5s infinite;
+}
+
+.update-info {
+  margin-top: 30px;
+  font-size: 0.95rem;
+  color: #aaa;
+  opacity: 0.8;
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .leaderboard-title {
+    font-size: 2.2rem;
+  }
+
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .table-container {
+    margin: 0 10px;
+  }
+}

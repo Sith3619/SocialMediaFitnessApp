@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase/firebase";
@@ -6,7 +6,11 @@ import "./header.css";
 
 function Header() {
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleMenuToggle = () => {
+    setMenuOpen(!menuOpen);
+  };
   const handleLogout = () => {
     signOut(auth)
       .then(() => {
@@ -26,21 +30,32 @@ function Header() {
         </Link>
       </h1>
       <div className="header-right">
-        <div className="dropdown">
-          <button className="dropbtn">Menu</button>
-          <div className="dropdown-content">
-            <Link to="/">Home</Link>
-            <Link to="/page-two">Profile</Link>
-            <Link to="/settings">Settings</Link>
-            <Link to="/privacy-controls">Privacy Controls</Link>
-            <Link to="/custom-workouts">Workout Plans</Link>
-            <Link to="/page-one">TempBlank</Link>
-            <Link to="/page-three">Trackers</Link>
-          </div>
-        </div>
-        <button onClick={handleLogout} className="logout-btn">
-          Logout
-        </button>
+        {/* <button className="menu-btn" onClick={handleMenuToggle}>
+          ☰
+        </button> */}
+        <nav className={`header-nav ${menuOpen ? "show" : ""}`}>
+          <Link to="/" className="header-button">
+            Home
+          </Link>
+          <Link to="/profile" className="header-button">
+            Profile
+          </Link>
+          <Link to="/settings" className="header-button">
+            Settings
+          </Link>
+          <Link to="/health-calculator" className="header-button">
+            BMI/BMR
+          </Link>
+          <Link to="/custom-workouts" className="header-button">
+            Workouts
+          </Link>
+          <Link to="/trackers" className="header-button">
+            Trackers
+          </Link>
+          <button onClick={handleLogout} className="header-button logout-btn">
+            Logout
+          </button>
+        </nav>
       </div>
     </header>
   );

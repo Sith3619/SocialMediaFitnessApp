@@ -30,11 +30,6 @@ function Settings({ theme, setTheme }) {
         onChange={(e) => setNewPassword(e.target.value)}
       />
       <button onClick={() => alert("Password updated!")}>Save Password</button>
-
-      <h2>Theme Settings</h2>
-      <button onClick={handleThemeToggle}>
-        Toggle Theme ({theme === "light" ? "Dark" : "Light"} Mode)
-      </button>
     </div>
   );
 }

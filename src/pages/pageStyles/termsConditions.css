@@ -1,0 +1,123 @@
+.terms-conditions-container {
+  background-color: #1a1a1a;
+  color: #eaeaea;
+  padding: 40px 60px;
+  border-radius: 12px;
+  max-width: 1200px;
+  margin: 60px auto;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+  opacity: 1;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.terms-conditions-title {
+  font-size: 3rem;
+  color: #9b59b6;
+  text-align: center;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.7);
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.terms-conditions-content {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.terms-conditions-intro {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #b0b0b0;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 40px;
+}
+
+.terms-conditions-subheading {
+  font-size: 2.2rem;
+  color: #9b59b6;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+}
+
+.terms-conditions-list {
+  font-size: 1.1rem;
+  color: #b0b0b0;
+  margin-left: 30px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.terms-conditions-footer {
+  font-size: 1.3rem;
+  color: #9b59b6;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.terms-conditions-footer a {
+  color: #9b59b6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.terms-conditions-footer a:hover {
+  text-decoration: underline;
+  transition: text-decoration 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .terms-conditions-title {
+    font-size: 2.5rem;
+  }
+
+  .terms-conditions-intro {
+    font-size: 1.1rem;
+  }
+
+  .terms-conditions-subheading {
+    font-size: 1.6rem;
+  }
+
+  .terms-conditions-list {
+    font-size: 1rem;
+  }
+
+  .terms-conditions-footer {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .terms-conditions-title {
+    font-size: 2rem;
+  }
+
+  .terms-conditions-intro {
+    font-size: 1rem;
+  }
+
+  .terms-conditions-subheading {
+    font-size: 1.4rem;
+  }
+
+  .terms-conditions-list {
+    font-size: 0.9rem;
+  }
+
+  .terms-conditions-footer {
+    font-size: 1rem;
+  }
+}

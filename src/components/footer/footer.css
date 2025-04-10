@@ -1,43 +1,140 @@
-html,
-body {
-  height: 100%;
+* {
   margin: 0;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 footer {
-  background-color: #222;
-  color: white;
-  padding: 20px;
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  margin-top: auto;
 }
 
 .footer-content {
+  width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.footer-links {
-  margin-top: 10px;
+.footer-section {
+  flex: 1 1 250px;
+  min-width: 250px;
+  padding: 10px;
 }
 
-.footer-links a {
-  color: white;
+.footer-section h4 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #8a2be2;
+}
+
+.footer-links,
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a,
+.social-links a {
+  color: #fff;
   text-decoration: none;
-  margin: 0 15px;
   font-size: 16px;
+  transition: color 0.3s ease;
 }
 
-.footer-links a:hover {
-  text-decoration: underline;
+.footer-links a:hover,
+.social-links a:hover {
+  color: #8a2be2;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.newsletter-form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #8a2be2;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+}
+
+.newsletter-form button {
+  padding: 10px 20px;
+  background-color: #8a2be2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #5e1aa1;
 }
 
 footer p {
-  font-size: 14px;
-  margin: 0;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-section {
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px 0;
+  }
+
+  .footer-links,
+  .social-links {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .footer-links a,
+  .social-links a {
+    margin: 0 5px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 30px 15px;
+  }
+
+  .footer-section h4 {
+    font-size: 20px;
+  }
+
+  .footer-links a,
+  .social-links a {
+    font-size: 14px;
+  }
+
+  .newsletter-form input,
+  .newsletter-form button {
+    font-size: 14px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
 }
